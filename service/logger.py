@@ -6,6 +6,7 @@ class AdenLogger:
         Loggear info con datos de odoo
 
         :param: model_name: debe ser el self._name
+        :param: res_id: debe ser el self.id
         :param: log_uid: debe ser el self._uid
         :param: env: debe ser el self.env
         :param: message: un mensaje breve
@@ -21,6 +22,7 @@ class AdenLogger:
         Loggear warnings con datos de odoo
 
         :param: model_name: debe ser el self._name
+        :param: res_id: debe ser el self.id
         :param: log_uid: debe ser el self._uid
         :param: env: debe ser el self.env
         :param: message: un mensaje breve
@@ -36,6 +38,7 @@ class AdenLogger:
         Loggear error con datos de odoo
 
         :param: model_name: debe ser el self._name
+        :param: res_id: debe ser el self.id
         :param: log_uid: debe ser el self._uid
         :param: env: debe ser el self.env
         :param: message: un mensaje breve
@@ -51,6 +54,7 @@ class AdenLogger:
         Loggear criticos con datos de odoo
 
         :param: model_name: debe ser el self._name
+        :param: res_id: debe ser el self.id
         :param: log_uid: debe ser el self._uid
         :param: env: debe ser el self.env
         :param: message: un mensaje breve
