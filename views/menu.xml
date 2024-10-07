@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="aden_logs">
+            <field name="name">Logs</field>
+            <field name="res_model">aden.log</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+            name="Registros(Logs)"
+            id="menu_aden_logs"
+            action="aden_logs"
+        />
+
+    </data>
+</odoo>

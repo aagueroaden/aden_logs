@@ -1,0 +1,40 @@
+<odoo>
+    <!-- list/tree view -->
+    <record id="view_aden_log_tree" model="ir.ui.view">
+        <field name="name">aden.log.tree</field>
+        <field name="model">aden.log</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="id"/>
+                <field name="create_date"/>
+                <field name="level"/>
+                <field name="pid"/>
+                <field name="model_id"/>
+                <field name="user_name"/>
+                <field name="message"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- form view -->
+    <record id="view_aden_log_form" model="ir.ui.view">
+        <field name="name">aden.log.form</field>
+        <field name="model">aden.log</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="create_date"/>
+                        <field name="level" readonly="1"/>
+                        <field name="pid"/>
+                        <field name="model_id" readonly="1"/>
+                        <field name="user_name" readonly="1"/>
+                        <field name="message" readonly="1"/>
+                        <field name="description" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
