@@ -12,7 +12,7 @@ class AdenLogger:
         :param: message: un mensaje breve
         :param: description: ejemplo json payload
         """
-        return __logger_with_object(
+        return _logger_with_object(
             model_name, res_id, log_uid, env, message, description,level="info"
         )
 
@@ -28,7 +28,7 @@ class AdenLogger:
         :param: message: un mensaje breve
         :param: description: ejemplo json payload
         """
-        return __logger_with_object(
+        return _logger_with_object(
             model_name, res_id, log_uid, env, message, description, level="warning"
         )
 
@@ -44,7 +44,7 @@ class AdenLogger:
         :param: message: un mensaje breve
         :param: description: ejemplo json payload
         """
-        return __logger_with_object(
+        return _logger_with_object(
             model_name, res_id, log_uid, env, message, description, level="error"
         )
 
@@ -60,13 +60,13 @@ class AdenLogger:
         :param: message: un mensaje breve
         :param: description: ejemplo json payload
         """
-        return __logger_with_object(
+        return _logger_with_object(
             model_name, res_id, log_uid, env, message, description, level="critical"
         )
 
 
 
-def __logger_with_object(
+def _logger_with_object(
     model_name: str,
     res_id: int,
     log_uid: int,
