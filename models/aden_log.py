@@ -42,9 +42,8 @@ class AdenLog(models.Model):
 
     log_uid = fields.Integer('Usuario ID', readonly=True)
 
-    pid = fields.Integer('Id de Registro')
 
-    def create_with_object(self, model_name, res_id, log_uid, message, description, level):
+    def create_with_object(self, model_name, log_uid, message, description, level):
         if not level or level not in ["info", "warning", "error", "critical"]:
             raise ValidationError("Nivel especificado desconocido")
         model_id = self._extract_model_id(model_name=model_name)
@@ -54,7 +53,6 @@ class AdenLog(models.Model):
             "description": str(description),
             "log_uid": log_uid,
             "model_id": model_id,
-            "pid": res_id,
         })
 
     def _extract_user_name(self):
@@ -89,7 +87,6 @@ class AdenLog(models.Model):
             # va como ejemplo de uso
             AdenLogger.error(
                 model_name=self._name,
-                res_id=self.id,
                 log_uid=self._uid,
                 message="Error al crear mensaje a travez de la api",
                 description=str(e),

@@ -8,7 +8,6 @@
                 <field name="id"/>
                 <field name="create_date"/>
                 <field name="level"/>
-                <field name="pid"/>
                 <field name="model_id"/>
                 <field name="user_name"/>
                 <field name="message"/>
@@ -26,7 +25,6 @@
                     <group>
                         <field name="create_date"/>
                         <field name="level" readonly="1"/>
-                        <field name="pid"/>
                         <field name="model_id" readonly="1"/>
                         <field name="user_name" readonly="1"/>
                         <field name="message" readonly="1"/>
