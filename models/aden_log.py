@@ -81,6 +81,7 @@ class AdenLog(models.Model):
                 "level": level,
                 "message": str(message),
                 "description": str(description),
+                "log_uid": self._uid
             })
             return {"status": "success"}
         except Exception as e:
