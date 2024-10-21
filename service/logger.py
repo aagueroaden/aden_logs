@@ -12,7 +12,7 @@ class AdenLogger:
         :param: description: ejemplo json payload
         """
         return _logger_with_object(
-            model_name, log_uid, env, message, description,level="info"
+            model_name, log_uid, env, message, description, level="info"
         )
 
     @staticmethod
@@ -61,14 +61,13 @@ class AdenLogger:
         )
 
 
-
 def _logger_with_object(
     model_name: str,
     log_uid: int,
     env,
     message: str,
     description: str,
-    level: str="info"
+    level: str = "info"
 ) -> None:
     """
     No se deberia llamar a este metodo

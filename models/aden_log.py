@@ -2,12 +2,12 @@ from odoo import api, models, fields
 from odoo.exceptions import ValidationError
 from ..service.logger import AdenLogger
 
+
 class AdenLog(models.Model):
     _name = "aden.log"
     _description = "Aden Log"
     _rec_name = "message"
     _order = "create_date desc"
-
 
     user_name = fields.Char(
         string='Usuario',
@@ -23,6 +23,7 @@ class AdenLog(models.Model):
 
     description = fields.Text(
         string="Descripcion",
+        required=False,
     )
 
     message = fields.Char(
@@ -33,7 +34,7 @@ class AdenLog(models.Model):
     level = fields.Selection(
         selection=[
             ("info", "INFO"),
-            ("warning", "ADVERTENCIA"), 
+            ("warning", "ADVERTENCIA"),
             ("error", "ERROR"),
             ("critical", "CRITICO"),
         ],
@@ -41,7 +42,6 @@ class AdenLog(models.Model):
     )
 
     log_uid = fields.Integer('Usuario ID', readonly=True)
-
 
     def create_with_object(self, model_name, log_uid, message, description, level):
         if not level or level not in ["info", "warning", "error", "critical"]:
